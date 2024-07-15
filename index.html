@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everything Delivered in Minute</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Favicon -->
+    <link rel="icon" type="image" sizes="16x16" href="blinkit.png">
+    <style>
+        /* Header */
+        .header-container {
+            display: flex;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .header-container {
+            margin-bottom: 50px;
+        }
+
+        .header-location {
+            width: 300px;
+            height: 100px;
+            margin-top: 10px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .search {
+            width: 600px;
+            height: 10px;
+            border-radius: 10px;
+            border: none;
+            padding: 5px;
+        }
+
+        .search-bar {
+            margin: 10px;
+            width: 700px;
+            height: 40px;
+            border-radius: 10px;
+            border: 1px solid wheat;
+        }
+
+        .log {
+            margin-left: 4%;
+            padding: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+        }
+
+        .cart {
+            width: 100px;
+            height: 30px;
+            background-color: green;
+            border-radius: 5px;
+            margin-left: 4%;
+            color: #ffffff;
+            text-align: center;
+            padding: 5px;
+            padding-top: 20px;
+        }
+
+        /* main */
+        main {
+            display: flex;
+            justify-content: center;
+        }
+
+        .main-container {
+            max-width: 1300px;
+        }
+
+        .section1,
+        .section1 img {
+            width: 100%;
+        }
+
+        .section2 {
+            margin-bottom: 0 16px;
+            display: flex;
+            overflow: auto scroll;
+            gap: 20px;
+            border-radius: 12px;
+        }
+
+        .section2 img {
+            height: 195px;
+            width: 335px;
+            cursor: pointer;
+            display: flex;
+        }
+
+        .section3 {
+            margin-top: 16px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .section3-img {
+            width: 128px
+        }
+
+        .section3-img img {
+            width: 100%;
+        }
+
+        .section4 {
+            margin: 16px;
+        }
+
+        .section-header {
+            font-size: 28px;
+            font-weight: 800;
+        }
+
+        .section-list {
+            margin-top: 16px;
+            width: 100%;
+            display: flex;
+            overflow: auto scroll;
+            gap: 20px;
+        }
+
+        .product-list {
+            padding: 12px;
+            width: 154px;
+            border: 0.5px;
+            border-radius: 8px;
+        }
+
+        .product-list img {
+            width: 100%;
+        }
+
+        .product-title {
+            font-size: 14px;
+            margin-bottom: 2px;
+        }
+
+        .prodct-description {
+            font-size: 12px;
+            margin-bottom: 12px;
+            color: black;
+        }
+
+        .product-action {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-action button {
+            font-weight: 600;
+            font-size: 13px;
+            width: 90px;
+            height: 36px;
+            border: 0.5px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(49, 134, 22);
+        }
+
+        .footer-start {
+            display: flex;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+        }
+
+        .footer-1 {
+            margin-right: 50px;
+            width: 500px;
+        }
+
+        .footer-2 {
+            width: 70%;
+        }
+
+        .copywrite {
+            display: flex;
+        }
+
+        #app {
+            margin-left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="header-left">
+                <img src="blinkitsimple.svg" alt="blinkit">
+            </div>
+            <div class="header-location">
+                <div class="header-location-title"><b>Delivery in 9 minutes </b><br> <span
+                        style="font-size: 15px;font-family: Arial, Helvetica, sans-serif;">Maharashtra 411047,
+                        India</span></div>
+            </div>
+
+            <div class="search-bar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="17" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-search" style=" margin-top:10px">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                    <path d="M21 21l-6 -6" />
+                </svg>
+                <!-- <img src="search.png" alt="" width="20px" height="20px"> -->
+                <input type="text" placeholder="Search button" class="search">
+            </div>
+            <p class="log"><a href="Login.html" style="text-decoration: none; color: black;">Login</p></a>
+            <div class="cart"><img src="cart-shopping-solid.svg" alt="" width="24" height="17">MyCart</div>
+        </div>
+
+        <main>
+            <div class="main-container">
+
+                <section class="section1">
+                    <a href="https://blinkit.com/paan"><img src="Paan.jpg" alt=""></a>
+                </section>
+
+                <section class="section2">
+                    <div class="section2-img">
+                        <a href="https://blinkit.com/cn/masks-sanitizers/cid/287/1826"><img src="pharmacy.jpg" alt=""></a>
+                    </div>
+                    <div class="section2-img">
+                        <a href="https://blinkit.com/cn/null/cid/5/133"><img src="PetCare.jpg" alt=""></a>
+                    </div>
+                    <div class="section2-img">
+                        <a href="https://blinkit.com/cn/diapers-more/cid/7/1000"><img src="babycare.jpg" alt=""></a>
+                    </div>
+                    <div class="section2-img">
+                        <a href="https://blinkit.com/cn/masks-sanitizers/cid/287/1826"><img src="pharmacy.jpg" alt=""></a>
+                    </div>
+                    <div class="section2-img">
+                        <a href="https://blinkit.com/cn/null/cid/5/133"><img src="PetCare.jpg" alt=""></a>
+                    </div>
+                </section>
+
+                <section class="section3">
+                    <div class="section3-img">
+                        <a href="https://blinkit.com/cn/rolling-paper/cid/229/1982"><img src="paan-corner_web.jfif" alt=""></a>
+                    </div>
+                    <div class="section3-img">
+                        <a href="https://blinkit.com/cn/fresh-vegetables/cid/1487/1489"><img src="Fruits&Vegetables.png" alt=""></a>
+                    </div>
+                    <div class="section3-img">
+                        <a href="https://blinkit.com/cn/cookies/cid/888/28"><img src="Bakery&Biscuits.png" alt=""></a>
+                    </div>
+                    <div class="section3-img">
+                        <a href="https://blinkit.com/cn/null/cid/15/954"><img src="Breakfast&InstantFood.png" alt=""></a>
+                    </div>
+                    <div class="section3-img">
+                        <a href="https://blinkit.com/cn/soft-drinks/cid/332/1102"><img src="ColdDrinks&Juices.png" alt=""></a>
+                    </div>
+                    <div class="section3-img">
+                        <a href="https://blinkit.com/cn/chips-crisps/cid/1237/940"><img src="Snacks&Munchies.png" alt=""></a>
+                    </div>
+                    <div class="section3-img">
+                        <a href="https://blinkit.com/cn/chocolates/cid/9/944"><img src="SweetTooth.png" alt=""></a>
+                    </div>
+                    <div class="section3-img">
+                        <a href="https://blinkit.com/cn/milk/cid/14/922"><img src="Dairy,Bread&Eggs.png" alt=""></a>
+                    </div>
+                    <div class="section3-img">
+                        <a href="https://blinkit.com/cn/atta/cid/16/1165"><img src="Atta,Rice&Dal.png" alt=""></a>
+                    </div>
+                    <div class="section3-img">
+                        <a href="https://blinkit.com/cn/powdered-spices/cid/1557/50"><img src="Masala,oil&More.png" alt=""></a>
+                    </div>
+                    <div class="section3-img">
+                        <a href="https://blinkit.com/cn/null/cid/972/1131"><img src="Sauces&Spreads.png" alt=""></a>
+                    </div>
+                    <div class="section3-img">
+                        <a href="https://blinkit.com/cn/chicken/cid/4/1362"><img src="Chicken,Meat&Fish.png" alt=""></a>
+                    </div>
+                    <div class="section3-img">
+                        <a href="https://blinkit.com/cn/flour/cid/175/801"><img src="Organic&HealthyLiving.png" alt=""></a>
+                    </div>
+                    <div class="section3-img">
+                        <a href="https://blinkit.com/cn/diapers-more/cid/7/1000"><img src="BabyCare.png" alt=""></a>
+                    </div>
+                    <div class="section3-img">
+                        <a href="https://blinkit.com/cn/masks-sanitizers/cid/287/1826"><img src="Pharma&Wellness.png" alt=""></a>
+                    </div>
+                    <div class="section3-img">
+                        <a href="https://blinkit.com/cn/dishwashing-accessories/cid/18/986"><img src="CleaningEssentials.png" alt=""></a>
+                    </div>
+                    <div class="section3-img">
+                        <a href="https://blinkit.com/cn/tissues-disposables/cid/1379/1075"><img src="Home&Office.png" alt=""></a>
+                    </div>
+                    <div class="section3-img">
+                        <a href="https://blinkit.com/cn/bathing-soaps/cid/163/696"><img src="PersonalCare.png" alt=""></a>
+                    </div>
+                    <div class="section3-img">
+                        <a href="https://blinkit.com/cn/null/cid/5/133"><img src="PetCare.png" alt=""></a>
+                    </div>
+                    <div class="section3-img">
+                        <a href="https://blinkit.com/cn/masks-sanitizers/cid/287/1826"><img src="Pharma&Wellness.png" alt=""></a>
+                    </div>
+                </section>
+
+                <section class="section4">
+                    <div class="section-header">
+                        Snacks & Munchies
+                    </div>
+                    <div class="section-list">
+                        <div class="product-list">
+                            <a href="https://blinkit.com/prn/doritos-cheese-nachos/prid/432818">
+                                <img src="Doritos.jpg" alt=""></a>
+                            <p class="product-title">Doritos Cheese Nachos</p>
+                            <!-- <p class="product-description">60 g <span style="color: red;">Rs. 30</span></p> -->
+                            <p class="product-description">60 g</p>
+                            <div class="product-action">
+                                <p class="product-quantity">Rs.30</p>
+                                <button>ADD</button>
+                            </div>
+                        </div>
+                        <div class="product-list">
+                            <a href="https://blinkit.com/prn/haldirams-nagpur-sev-bhujia/prid/52659">
+                            <img src="Sev.jpg" alt=""></a>
+                            <p class="product-title">Haldiram's Nagpur Sev Bhujiya</p>
+                            <p class="product-description">1 kg</p>
+                            <div class="product-action">
+                                <p class="product-quantity">Rs.236</p>
+                                <button>ADD</button>
+                            </div>
+                        </div>
+                        <div class="product-list">
+                            <a href="https://blinkit.com/prn/lays-indias-magic-masala-potato-chips/prid/240092">
+                            <img src="Lay's.jpg" alt=""></a>
+                            <p class="product-title">Lay's India's Magic Masala Potato Chips</p>
+                            <p class="product-description">48 g</p>
+                            <div class="product-action">
+                                <p class="product-quantity">Rs.20</p>
+                                <button>ADD</button>
+                            </div>
+                        </div>
+                        <div class="product-list">
+                            <a href="https://blinkit.com/prn/haldirams-nagpur-masala-kaju/prid/52629">
+                            <img src="Doritos.jpg" alt=""></a>
+                            <p class="product-title">Haldiram's Nagpur Masala Kaju</p>
+                            <p class="product-description">35 g</p>
+                            <div class="product-action">
+                                <p class="product-quantity">Rs. 50</p>
+                                <button>ADD</button>
+                            </div>
+                        </div>
+                        <div class="product-list">
+                            <a href="https://blinkit.com/prn/haldirams-nagpur-lite-chivda-namkeen/prid/251510">
+                            <img src="Chivda.jpg" alt=""></a>
+                            <p class="product-title">Haldiram's Nagpur Lite Chivda Namkeen</p>
+                            <p class="product-description">200 g</p>
+                            <div class="product-action">
+                                <p class="product-quantity">Rs. 40</p>
+                                <button>ADD</button>
+                            </div>
+                        </div>
+                        <div class="product-list">
+                            <a href="https://blinkit.com/prn/chhedas-farsan-mixture-namkeen/prid/372138">
+                            <img src="Farsan.jpg" alt=""></a>
+                            <p class="product-title">Chheda's Farsan Mixture Namkeen</p>
+                            <p class="product-description">170 g</p>
+                            <div class="product-action">
+                                <p class="product-quantity">Rs. 55</p>
+                                <button>ADD</button>
+                            </div>
+                        </div>
+                        <div class="product-list">
+                            <a href="https://blinkit.com/prn/haldirams-soya-sticks-soya-sticks-pack-of-2/prid/482020">
+                            <img src="Sticks.jpg" alt=""></a>
+                            <p class="product-title">Haldiram's Soya Sticks Soya Sticks</p>
+                            <p class="product-description">100 g</p>
+                            <div class="product-action">
+                                <p class="product-quantity">Rs. 45</p>
+                                <button>ADD</button>
+                            </div>
+                        </div>
+                        <div class="product-list">
+                            <a href="https://blinkit.com/prn/lijjat-punjabi-masala-papad/prid/18925">
+                            <img src="Lijjat.jpg" alt=""></a>
+                            <p class="product-title">Lijjat Plain Urad Papad</p>
+                            <p class="product-description">200 g</p>
+                            <div class="product-action">
+                                <p class="product-quantity">Rs. 77</p>
+                                <button>ADD</button>
+                            </div>
+                        </div>
+                        <div class="product-list">
+                            <a href="https://blinkit.com/prn/doritos-cheese-nachos/prid/432818">
+                            <img src="Doritos.jpg" alt=""></a>
+                            <p class="product-title">Doritos Cheese Nachos</p>
+                            <p class="product-description">60 g</p>
+                            <div class="product-action">
+                                <p class="product-quantity">Rs. 30</p>
+                                <button>ADD</button>
+                            </div>
+                        </div>
+                        <div class="product-list">
+                            <a href="https://blinkit.com/prn/haldirams-nagpur-sev-bhujia/prid/52659">
+                            <img src="Sev.jpg" alt=""></a>
+                            <p class="product-title">Haldiram's Nagpur Sev Bhujia</p>
+                            <p class="product-description">1 kg</p>
+                            <div class="product-action">
+                                <p class="product-quantity">Rs. 258</p>
+                                <button>ADD</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <!-- Footer -->
+        <div class="footer-start">
+            <div class="footer-1" style="margin-left: 100px;">
+                <h4 style="margin-right: 55px; text-align: start;">Useful Links</h4>
+                <table>
+                    <tr>
+                        <th style="padding: 5px;"></th>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                        <th style="padding: 5px;"></th>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                        <th style="padding: 5px;"></th>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 5px;"><span><a href="https://blinkit.com/aboutus"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">About</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                        <td style="padding: 5px;"><span><a href="https://blinkit.com/privacy"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Privacy</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                        <td style="padding: 5px;"><span><a href="https://blinkit.com/partner"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Partner</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 5px;"><span><a href="https://blinkit.com/careers"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Careers</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                        <td style="padding: 5px;"><span><a href="https://blinkit.com/Terms"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Terms</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                        <td style="padding: 5px;"><span><a href="https://blinkit.com/express"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Express</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 5px;"><span><a href="https://blinkit.com/blog"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Blogs</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                        <td style="padding: 5px;"><span><a href="https://blinkit.com/faq"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">FAQ's</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                        <td style="padding: 5px;"><span><a href="https://seller.blinkit.com/"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Seller</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 5px;"><span><a href="https://blinkit.com/press"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Press</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                        <td style="padding: 5px;"><span><a href="https://blinkit.com/security"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Security</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                        <td style="padding: 5px;"><span><a href="https://blinkit.com/warehouse-partner"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Warehouse</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 5px;"><span><a href="https://blinkit.com/leadership"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Lead</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                        <td style="padding: 5px;"><span><a href="https://blinkit.com/mobile"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Mobile</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                        <td style="padding: 5px;"><span><a href="https://blinkit.com/delivery"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Deliver</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 5px;"><span><a href="https://blinkit.com/values"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Value</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                        <td style="padding: 5px;"><span><a href="https://blinkit.com/contact"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Contact</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                        <td style="padding: 5px;"><span><a href="https://blinkit.com/resources"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Resources</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                    </tr>
+                </table>
+            </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <div class="footer-2">
+                <h4>Categories <span><a href="https://blinkit.com/categories"
+                            style="text-decoration: none; color: green;">see all</a></span></h4>
+                <table>
+                    <tr>
+                        <th style="padding: 4px;"></th>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                        <th style="padding: 4px;"></th>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                        <th style="padding: 4px;"></th>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 4px;"><span><a href="https://blinkit.com/cn/fresh-vegetables/cid/1487/1489"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Vegetables & Fruits</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                        <td style="padding: 4px;"><span><a href="https://blinkit.com/cn/milk/cid/14/922"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Dairy & Breakfast</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                        <td style="padding: 4px;"><span><a href="https://blinkit.com/cn/chips-crisps/cid/1237/940"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Munchies</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 4px;"><span><a href="https://blinkit.com/cn/beverages-gift-packs/cid/332/1323"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Cold Drinks & Juices</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                        <td style="padding: 4px;"><span><a href="https://blinkit.com/cn/noodles/cid/15/962"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Instant & Frozen Food</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                        <td style="padding: 4px;"><span><a href="https://blinkit.com/cn/tea/cid/12/957"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Tea, Coffee & Health Drinks</a></span>
+                        </td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 4px;"><span><a href="https://blinkit.com/cn/biscuit-gift-pack/cid/888/2380"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Bakery & Biscuits</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                        <td style="padding: 4px;"><span><a href="https://blinkit.com/cn/indian-sweets/cid/9/943"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">SweetTooth</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                        <td style="padding: 4px;"><span><a href="https://blinkit.com/cn/atta/cid/16/1165"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Atta,Rice & Dal</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 4px;"><span><a href="https://blinkit.com/cn/oil/cid/1557/917"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Dry Fruits, Masala & Oil</a></span>
+                        </td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                        <td style="padding: 4px;"><span><a href="https://blinkit.com/cn/tomato-chilli-ketchup/cid/972/277"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Sauces & Spreads</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                        <td style="padding: 4px;"><span><a href="https://blinkit.com/cn/fresh-meat/cid/4/1201"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Chicken, Meat & Fish</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 4px;"><span><a href="https://blinkit.com/cn/cigarettes/cid/229/1948"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Paan Corner</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                        <td style="padding: 4px;"><span><a href="https://blinkit.com/cn/oil-ghee/cid/175/799"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Organic & Premium</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                        <td style="padding: 4px;"><span><a href="https://blinkit.com/cn/diapers-more/cid/7/1000"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Bady Care</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 4px;"><span><a href="https://blinkit.com/cn/sexual-wellness/cid/287/741"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Pharma & Wellness</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                        <td style="padding: 4px;"><span><a href="https://blinkit.com/cn/fresheners/cid/18/1085"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">CleaningEssentials</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                        <td style="padding: 4px;"><span><a href="https://blinkit.com/cn/appliances/cid/1379/1886"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Home & Office</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 4px;"><span><a href="https://blinkit.com/cn/sticks/cid/1969/263"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Ice Creams & Frozen Desserts</a></span>
+                        </td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                        <td style="padding: 4px;"><span><a href="https://blinkit.com/cn/body-moisturizers-more/cid/163/690"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Personal Care</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                        <td style="padding: 4px;"><span><a href="https://blinkit.com/cn/accessories-other-supplies/cid/5/3609"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Pet Care</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 4px;"><span><a href="https://blinkit.com/cn/bath-body-essentials/cid/13/206"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Beauty & Cosmetics</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                        <td style="padding: 4px;"><span><a href="https://blinkit.com/cn/current-affairs-business/cid/851/1015"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Magazines</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                        <td style="padding: 4px;"><span><a href="https://blinkit.com/cn/childrens-books/cid/1559/273"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Books</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 4px;"><span><a href="https://blinkit.com/cn/action-toys-toy-vehicles/cid/675/151"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Toys & Games</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                        <td style="padding: 4px;"><span><a href="https://blinkit.com/print"
+                                    style="text-decoration: none; color: rgb(102, 102, 102);">Pint Store</a></span></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                        <td style="padding: 4px;"></td>
+                        <th class="navSpacer" style="width: 15%;"></th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="copywrite">
+            <p style="font-size: 13px; margin-left: 50px; font-family: Arial, Helvetica, sans-serif;">© Blink Commerce
+                Private Limited (formerly known as Grofers India <br>Private Limited), 2016-2024</p>
+            <p id="app">Download App</p>
+            <p><img src="appstore.png" alt="" height="30px" width="100px"></p>
+            <p><img src="googleplay.png" alt="" height="30px" width="100px"></p>
+            <!-- <p><img src="facebook.svg" alt="" style="padding: 10px;"></p> -->
+            <p><a href="https://www.facebook.com/blinkit.india/"><img src="facebook.svg" alt="" style="padding: 10px;"></a></p>
+            <p><a href="https://x.com/letsblinkit/"><img src="twitter.svg" alt="" style="padding: 10px;"></a></p>
+            <p><a href="https://www.instagram.com/letsblinkit/"><img src="insta.svg" alt="" style="padding: 10px;"></a></p>
+            <p><a href="https://in.linkedin.com/company/letsblinkit"><img src="in.svg" alt="" style="padding: 10px;"></a></p>
+        </div>
+        <div class="end" style="margin-left: 70px; font-family: Arial, Helvetica, sans-serif;font-size: 13px;">“Blinkit”
+            is owned & managed by "Blink Commerce Private Limited" (formerly known as Grofers India Private Limited) and
+            is not related, linked or interconnected in whatsoever manner or <br>nature, to “GROFFR.COM” which is a real
+            estate services business operated by “Redstone Consultancy Services Private Limited”</div>
+</body>
+
+</html>
